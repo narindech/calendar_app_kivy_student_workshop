@@ -1,0 +1,413 @@
+WindowManager:
+    SplashScreen:
+    MainScreen:
+
+<SplashScreen>:
+    name: "splash"
+    AnchorLayout:
+        Button:
+            size_hint: (.2, .2)
+            anchor_x: "center"
+            anchor_y: "center"
+            background_normal: "assets/kfc.jpg"
+            background_down: "assets/kfc.jpg"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "left"
+
+<MainScreen>:
+    name: "main"
+    on_enter: root.show_today_date()
+    FloatLayout:
+        TextInput:
+            id: year_text_input
+            text: root.kv_year
+            pos: (300, 530)
+            size_hint: (.2, .05)
+            multiline: False
+            on_text_validate: root.CallTextInput()
+
+        Label:
+            text: root.count_str
+            pos: (300, 490)
+            size_hint: (.2, .05)
+        GridLayout:
+            cols: 7
+            size_hint: (.95, .7)
+            pos: (25, 75)
+            Label:
+                text: "SUN"
+                color: "#ff6f69"
+                bold: True
+            Label:
+                text: "MON"
+                color: "#ffcc5c"
+                bold: True
+            Label:
+                text: "TUE"
+                color: "#ffcc5c"
+                bold: True
+            Label:
+                text: "WED"
+                color: "#ffcc5c"
+                bold: True
+            Label:
+                text: "THU"
+                color: "#ffcc5c"
+                bold: True
+            Label:
+                text: "FRI"
+                color: "#ffcc5c"
+                bold: True
+            Label:
+                text: "SAT"
+                color: "#7289da"
+                bold: True
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row00_label
+                    text: "1"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row01_label
+                    text: "2"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row02_label
+                    text: "3"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row03_label
+                    text: "4"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row04_label
+                    text: "5"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row05_label
+                    text: "6"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row06_label
+                    text: "7"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row10_label
+                    text: "8"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row11_label
+                    text: "9"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row12_label
+                    text: "10"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row13_label
+                    text: "11"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row14_label
+                    text: "12"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row15_label
+                    text: "13"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row16_label
+                    text: "14"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row20_label
+                    text: "15"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row21_label
+                    text: "16"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row22_label
+                    text: "17"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row23_label
+                    text: "18"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row24_label
+                    text: "19"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row25_label
+                    text: "20"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row26_label
+                    text: "21"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row30_label
+                    text: "22"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row31_label
+                    text: "23"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row32_label
+                    text: "24"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row33_label
+                    text: "25"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row34_label
+                    text: "26"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row35_label
+                    text: "27"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row36_label
+                    text: "28"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row40_label
+                    text: "29"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row41_label
+                    text: "30"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row42_label
+                    text: "31"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row43_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row44_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row45_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row46_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row50_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row51_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row52_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row53_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row54_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row55_label
+                    text: "*"
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+            BoxLayout:
+                orientation: "vertical"
+            BoxLayout:
+                orientation: "vertical"
+                Label:
+                    id: row56_label
+                    text: "*" 
+                Button:
+                    text: ""
+                    background_color: (.5,0,0,.5)
+        Button:
+            text: "<"
+            pos: (10, 10)
+            size_hint: (.2, .1)
+            on_press: root.back_button_pressed()
+        Button:
+            text: ">"
+            pos: (630, 10)
+            size_hint: (.2, .1)
+            on_press: root.next_button_pressed()

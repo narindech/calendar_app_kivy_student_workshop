@@ -562,6 +562,9 @@ class MainScreen(Screen):
         else:
             print("Invalid input length.")
 
+class TodoScreen(Screen):
+    pass
+
 class WindowManager(ScreenManager):
     pass
 
@@ -570,6 +573,7 @@ class DesignVersion1App(App):
         sm = ScreenManager()
         sm.add_widget(SplashScreen(name="splash"))
         sm.add_widget(MainScreen(name="main"))
+        sm.add_widget(TodoScreen(name="todo"))
         return sm
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 WindowManager:
     SplashScreen:
     MainScreen:
+    TodoScreen:
 
 <SplashScreen>:
     name: "splash"
@@ -71,6 +72,9 @@ WindowManager:
                 Button:
                     text: ""
                     background_color: (.5,0,0,.5)
+                    on_press:
+                        app.root.current = "todo"
+                        root.manager.transition.direction = "left"
             BoxLayout:
                 orientation: "vertical"
                 Label:
@@ -411,3 +415,24 @@ WindowManager:
             pos: (630, 10)
             size_hint: (.2, .1)
             on_press: root.next_button_pressed()
+
+<TodoScreen>:
+    name: "todo"
+    RelativeLayout:
+        BoxLayout:
+            pos_hint: {"top":1, "left":1}
+            size_hint: .5, .5
+            orientation: "horizontal"
+            TextInput:
+                text: "Hello"
+            TextInput:
+                text: "World"
+
+        Label:
+            text: "Hello TodoScreen"
+            pos_hint: {"bottom": 1, "left": 1}
+            size_hint: .2, .2
+        Button:
+            text: "Hello click me"
+            size_hint: .2, .2
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
